@@ -9,8 +9,8 @@ public class Projet
     public DateTime DateDebut { get; set; }
     public DateTime DateFinPrevue { get; set; }
     public DateTime? DateFinReelle { get; set; } // Peut être null si le projet n'est pas encore terminé
-    public double PourcentageAvancement { get; set; }
-    public decimal VenteReelle { get; set; }
+    public Avancements Avancements { get; set; }
+    public Coûts Coûts { get; set; } 
     public decimal Budget { get; set; }
     public decimal EcartVenteBudget => VenteReelle - Budget; // Calcul automatique de l’écart
 
